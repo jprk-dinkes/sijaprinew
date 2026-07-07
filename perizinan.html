@@ -487,8 +487,11 @@
 </a>
 <button class="back-to-top" id="backToTop"><i class="ph ph-arrow-up"></i></button>
 
+<script src="config.js"></script>
 <script src="app.js"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', applyConfig);
+
   // Perizinan nav tab highlight
   const sections = ['nakes','sarana','jadwal','download'];
   window.addEventListener('scroll', () => {
