@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perizinan Kesehatan – SIJAPRI Dinas Kesehatan Kota Bandung</title>
+  <meta name="description" content="Perizinan tenaga kesehatan (STR, SIP) dan sarana kesehatan (klinik, apotek, laboratorium) Kota Bandung – SIJAPRI Dinas Kesehatan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (brands only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css" />
+  <!-- Phosphor Icons – Premium duotone set -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="perizinan.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">
+        <svg viewBox="0 0 100 120" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+          <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#1565C0"/>
+          <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+          <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#2E7D32"/>
+        </svg>
+      </div>
+      <div class="nav-title-group">
+        <span class="nav-title-main">SIJAPRI</span>
+        <span class="nav-title-sub">Sistem Informasi Jaminan Pembiayaan &amp; Perizinan</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Beranda</a></li>
+      <li><a href="uhc.html" class="nav-link">Layanan UHC</a></li>
+      <li><a href="perizinan.html" class="nav-link active">Perizinan</a></li>
+      <li><a href="index.html#kontak" class="nav-link">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero page-hero-perizinan">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="ph ph-caret-right"></i>
+      <span>Perizinan Kesehatan</span>
+    </div>
+    <div class="page-hero-icon"><i class="ph-duotone ph-file-lock"></i></div>
+    <h1 class="page-hero-title">Perizinan Kesehatan</h1>
+    <p class="page-hero-subtitle">Layanan perizinan Tenaga Kesehatan (STR & SIP) dan Sarana Kesehatan (Klinik, Apotek, Laboratorium) Kota Bandung</p>
+  </div>
+</section>
+
+<!-- PERIZINAN NAV TABS -->
+<section class="pnav-section">
+  <div class="container">
+    <div class="pnav-tabs">
+      <a href="#nakes" class="pnav-tab active" id="pnav-nakes">
+        <i class="ph-duotone ph-identification-badge"></i>
+        <span>Perizinan Nakes</span>
+        <small>STR & SIP Tenaga Kesehatan</small>
+      </a>
+      <a href="#sarana" class="pnav-tab" id="pnav-sarana">
+        <i class="ph-duotone ph-hospital"></i>
+        <span>Perizinan Sarana</span>
+        <small>Klinik, Apotek & Faskes</small>
+      </a>
+      <a href="#jadwal" class="pnav-tab" id="pnav-jadwal">
+        <i class="ph-duotone ph-calendar-check"></i>
+        <span>Jadwal Konsultasi</span>
+        <small>Zoom & Tatap Muka</small>
+      </a>
+      <a href="#download" class="pnav-tab" id="pnav-download">
+        <i class="ph ph-download-simple"></i>
+        <span>Download</span>
+        <small>Formulir & Panduan</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NAKES SECTION -->
+<section class="peri-section" id="nakes">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Tenaga Kesehatan</span>
+      <h2 class="section-title">Perizinan Nakes</h2>
+      <p class="section-desc">Layanan penerbitan dan perpanjangan STR (Surat Tanda Registrasi) dan SIP (Surat Izin Praktik) bagi tenaga kesehatan Kota Bandung</p>
+    </div>
+    <div class="nakes-grid">
+
+      <!-- STR Card -->
+      <div class="nakes-card" id="nakes-str">
+        <div class="nk-header nk-blue">
+          <div class="nk-icon"><i class="ph-duotone ph-identification-badge"></i></div>
+          <div>
+            <h3>STR – Surat Tanda Registrasi</h3>
+            <p>Registrasi Tenaga Kesehatan Nasional</p>
+          </div>
+        </div>
+        <div class="nk-body">
+          <div class="nk-info-row">
+            <span class="nk-label">Instansi</span>
+            <span class="nk-value">Konsil Tenaga Kesehatan Indonesia (KTKI)</span>
+          </div>
+          <div class="nk-info-row">
+            <span class="nk-label">Sistem</span>
+            <span class="nk-value">Portal STR Online – ktki.kemkes.go.id</span>
+          </div>
+          <div class="nk-info-row">
+            <span class="nk-label">Berlaku</span>
+            <span class="nk-value">5 Tahun (dapat diperpanjang)</span>
+          </div>
+          <h4 class="nk-sub">Dokumen Persyaratan:</h4>
+          <ul class="nk-req-list">
+           <li><i class="ph-fill ph-check"></i> Ijazah Pendidikan (legalisir)</li>
+            <li><i class="ph-fill ph-check"></i> Sertifikat Kompetensi</li>
+            <li><i class="ph-fill ph-check"></i> Surat Keterangan Sehat</li>
+            <li><i class="ph-fill ph-check"></i> Pas Foto Terbaru 4×6</li>
+            <li><i class="ph-fill ph-check"></i> KTP Elektronik</li>
+            <li><i class="ph-fill ph-check"></i> Surat Pernyataan Sumpah</li>
+          </ul>
+          <a href="https://ktki.kemkes.go.id" target="_blank" class="btn btn-blue btn-full">
+            <i class="ph ph-arrow-square-out"></i> Daftar STR Online
+          </a>
+        </div>
+      </div>
+
+      <!-- SIP Card -->
+      <div class="nakes-card" id="nakes-sip">
+        <div class="nk-header nk-green">
+          <div class="nk-icon"><i class="ph-duotone ph-file-text"></i></div>
+          <div>
+            <h3>SIP – Surat Izin Praktik</h3>
+            <p>Izin Praktik di Kota Bandung</p>
+          </div>
+        </div>
+        <div class="nk-body">
+          <div class="nk-info-row">
+            <span class="nk-label">Instansi</span>
+            <span class="nk-value">Dinas Kesehatan Kota Bandung</span>
+          </div>
+          <div class="nk-info-row">
+            <span class="nk-label">Sistem</span>
+            <span class="nk-value">OSS-RBA – oss.go.id</span>
+          </div>
+          <div class="nk-info-row">
+            <span class="nk-label">Berlaku</span>
+            <span class="nk-value">Sesuai masa berlaku STR</span>
+          </div>
+          <h4 class="nk-sub">Dokumen Persyaratan:</h4>
+          <ul class="nk-req-list">
+           <li><i class="ph-fill ph-check"></i> STR yang Masih Berlaku</li>
+            <li><i class="ph-fill ph-check"></i> KTP Elektronik</li>
+            <li><i class="ph-fill ph-check"></i> Surat Pernyataan Pemilik Faskes</li>
+            <li><i class="ph-fill ph-check"></i> Surat Keterangan Sehat</li>
+            <li><i class="ph-fill ph-check"></i> Pas Foto 4×6 (2 lembar)</li>
+            <li><i class="ph-fill ph-check"></i> Rekomendasi Organisasi Profesi</li>
+          </ul>
+          <a href="https://oss.go.id" target="_blank" class="btn btn-green btn-full">
+            <i class="ph ph-arrow-square-out"></i> Ajukan SIP via OSS-RBA
+          </a>
+        </div>
+      </div>
+
+      <!-- Info Box -->
+      <div class="nakes-info-box">
+        <h4><i class="ph-duotone ph-info"></i> Jenis Tenaga Kesehatan yang Dilayani</h4>
+        <div class="nakes-profesi-grid">
+          <div class="profesi-item"><i class="ph-duotone ph-stethoscope"></i> Dokter Umum</div>
+          <div class="profesi-item"><i class="ph-duotone ph-tooth"></i> Dokter Gigi</div>
+          <div class="profesi-item"><i class="ph-duotone ph-syringe"></i> Perawat</div>
+          <div class="profesi-item"><i class="ph-duotone ph-baby"></i> Bidan</div>
+          <div class="profesi-item"><i class="ph-duotone ph-pill"></i> Apoteker</div>
+          <div class="profesi-item"><i class="ph-duotone ph-flask"></i> Analis Kes.</div>
+          <div class="profesi-item"><i class="ph-duotone ph-heartbeat"></i> Fisioterapis</div>
+          <div class="profesi-item"><i class="ph-duotone ph-eye"></i> Optometris</div>
+          <div class="profesi-item"><i class="ph-duotone ph-scan"></i> Radiografer</div>
+          <div class="profesi-item"><i class="ph-duotone ph-plus-circle"></i> &amp; Lainnya</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SARANA SECTION -->
+<section class="peri-section bg-light" id="sarana">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Sarana Kesehatan</span>
+      <h2 class="section-title">Perizinan Sarana Kesehatan</h2>
+      <p class="section-desc">Pengurusan izin operasional fasilitas pelayanan kesehatan di Kota Bandung melalui sistem OSS-RBA</p>
+    </div>
+    <div class="sarana-grid">
+      <div class="sarana-card" id="sarana-klinik">
+        <div class="sarana-icon sarana-blue"><i class="ph-duotone ph-buildings"></i></div>
+        <h3>Klinik Pratama & Utama</h3>
+        <p>Izin operasional klinik rawat jalan dan rawat inap tipe pratama maupun utama</p>
+        <div class="sarana-syarat">
+          <strong>Syarat Utama:</strong>
+          <ul>
+            <li>Akta pendirian badan hukum</li>
+            <li>Denah lokasi &amp; bangunan</li>
+            <li>Daftar tenaga kesehatan</li>
+            <li>Surat izin gangguan (HO)</li>
+          </ul>
+        </div>
+        <div class="sarana-footer">
+          <span class="sarana-time"><i class="ph-duotone ph-clock"></i> Proses: 7–14 hari kerja</span>
+          <a href="https://oss.go.id" target="_blank" class="sarana-link">OSS-RBA <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="sarana-card" id="sarana-apotek">
+        <div class="sarana-icon sarana-green"><i class="ph-duotone ph-flask"></i></div>
+        <h3>Apotek</h3>
+        <p>Izin mendirikan dan operasional apotek, apotik rakyat, dan depot obat</p>
+        <div class="sarana-syarat">
+          <strong>Syarat Utama:</strong>
+          <ul>
+            <li>SIPA Apoteker Penanggung Jawab</li>
+            <li>Denah bangunan apotek</li>
+            <li>Daftar obat dan perlengkapan</li>
+            <li>Surat pernyataan kepemilikan</li>
+          </ul>
+        </div>
+        <div class="sarana-footer">
+          <span class="sarana-time"><i class="ph-duotone ph-clock"></i> Proses: 5–10 hari kerja</span>
+          <a href="https://oss.go.id" target="_blank" class="sarana-link">OSS-RBA <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="sarana-card" id="sarana-lab">
+        <div class="sarana-icon sarana-yellow"><i class="ph-duotone ph-microscope"></i></div>
+        <h3>Laboratorium Klinik</h3>
+        <p>Izin operasional laboratorium klinik pratama dan madya di Kota Bandung</p>
+        <div class="sarana-syarat">
+          <strong>Syarat Utama:</strong>
+          <ul>
+            <li>Daftar alat laboratorium</li>
+            <li>Dokter PJ laboratorum</li>
+            <li>Izin bangunan (IMB/PBG)</li>
+            <li>Standarisasi reagen &amp; QC</li>
+          </ul>
+        </div>
+        <div class="sarana-footer">
+          <span class="sarana-time"><i class="ph-duotone ph-clock"></i> Proses: 10–14 hari kerja</span>
+          <a href="https://oss.go.id" target="_blank" class="sarana-link">OSS-RBA <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="sarana-card" id="sarana-optik">
+        <div class="sarana-icon sarana-blue"><i class="ph-duotone ph-eyeglasses"></i></div>
+        <h3>Optik</h3>
+        <p>Izin mendirikan toko optik dan usaha sarana pelayanan optik di Kota Bandung</p>
+        <div class="sarana-syarat">
+          <strong>Syarat Utama:</strong>
+          <ul>
+            <li>SIP Refraksionis Optisien</li>
+            <li>Denah ruang pelayanan</li>
+            <li>Daftar peralatan optik</li>
+            <li>Surat kepemilikan/sewa lokasi</li>
+          </ul>
+        </div>
+        <div class="sarana-footer">
+          <span class="sarana-time"><i class="ph-duotone ph-clock"></i> Proses: 5–7 hari kerja</span>
+          <a href="https://oss.go.id" target="_blank" class="sarana-link">OSS-RBA <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="sarana-card" id="sarana-rs">
+        <div class="sarana-icon sarana-green"><i class="ph-duotone ph-hospital"></i></div>
+        <h3>Rumah Sakit</h3>
+        <p>Izin mendirikan dan izin operasional Rumah Sakit tipe C dan D di Kota Bandung</p>
+        <div class="sarana-syarat">
+          <strong>Syarat Utama:</strong>
+          <ul>
+            <li>Studi kelayakan (feasibility study)</li>
+            <li>Master plan rumah sakit</li>
+            <li>Dokumen AMDAL</li>
+            <li>Pemenuhan standar SDM &amp; sarana</li>
+          </ul>
+        </div>
+        <div class="sarana-footer">
+          <span class="sarana-time"><i class="ph-duotone ph-clock"></i> Proses: 14–30 hari kerja</span>
+          <a href="https://oss.go.id" target="_blank" class="sarana-link">OSS-RBA <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="sarana-card" id="sarana-praktek">
+        <div class="sarana-icon sarana-yellow"><i class="ph-duotone ph-user-circle"></i></div>
+        <h3>Praktik Mandiri</h3>
+        <p>Izin praktik mandiri dokter, dokter gigi, bidan, dan tenaga kesehatan lainnya</p>
+        <div class="sarana-syarat">
+          <strong>Syarat Utama:</strong>
+          <ul>
+            <li>STR &amp; SIP yang masih berlaku</li>
+            <li>Denah tempat praktik</li>
+            <li>Rekomendasi organisasi profesi</li>
+            <li>Surat izin pemilik tempat</li>
+          </ul>
+        </div>
+        <div class="sarana-footer">
+          <span class="sarana-time"><i class="ph-duotone ph-clock"></i> Proses: 5–7 hari kerja</span>
+          <a href="https://oss.go.id" target="_blank" class="sarana-link">OSS-RBA <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JADWAL KONSULTASI -->
+<section class="peri-section" id="jadwal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Konsultasi Gratis</span>
+      <h2 class="section-title">Jadwal Konsultasi Perizinan</h2>
+      <p class="section-desc">Jadwal konsultasi online dan tatap muka dengan petugas JPRK Dinas Kesehatan Kota Bandung</p>
+    </div>
+    <div class="jadwal-grid">
+      <div class="jadwal-card jadwal-zoom" id="jadwal-zoom">
+        <div class="jadwal-header">
+          <div class="jadwal-icon"><i class="ph-duotone ph-video-camera"></i></div>
+          <div>
+            <h3>Konsultasi Online (Zoom)</h3>
+            <p>Setiap Selasa & Kamis, pukul 09.00 – 11.00 WIB</p>
+          </div>
+        </div>
+        <div class="jadwal-schedule">
+          <div class="sched-row">
+            <div class="sched-day">Selasa</div>
+            <div class="sched-time">09.00 – 11.00 WIB</div>
+            <div class="sched-topic">Perizinan Nakes (STR/SIP)</div>
+          </div>
+          <div class="sched-row">
+            <div class="sched-day">Kamis</div>
+            <div class="sched-time">09.00 – 11.00 WIB</div>
+            <div class="sched-topic">Perizinan Sarana Kesehatan</div>
+          </div>
+        </div>
+        <div class="jadwal-note">
+          <i class="ph-duotone ph-info"></i>
+          Pendaftaran konsultasi melalui WhatsApp minimal H-1 sebelum jadwal
+        </div>
+        <a href="https://wa.me/6281393400700" target="_blank" class="btn btn-primary btn-full">
+          <i class="fab fa-whatsapp"></i> Daftar Konsultasi Zoom
+        </a>
+      </div>
+      <div class="jadwal-card jadwal-langsung" id="jadwal-langsung">
+        <div class="jadwal-header">
+          <div class="jadwal-icon"><i class="ph-duotone ph-buildings"></i></div>
+          <div>
+            <h3>Konsultasi Tatap Muka</h3>
+            <p>Langsung di Dinas Kesehatan Kota Bandung</p>
+          </div>
+        </div>
+        <div class="jadwal-schedule">
+          <div class="sched-row">
+            <div class="sched-day">Senin – Kamis</div>
+            <div class="sched-time">08.00 – 15.00 WIB</div>
+            <div class="sched-topic">Loket JPRK – Lantai 2</div>
+          </div>
+          <div class="sched-row">
+            <div class="sched-day">Jumat</div>
+            <div class="sched-time">08.00 – 15.30 WIB</div>
+            <div class="sched-topic">Loket JPRK – Lantai 2</div>
+          </div>
+        </div>
+        <div class="jadwal-note">
+          <i class="ph-duotone ph-map-pin"></i>
+          Jl. Supratman No.73, Cibeunying Kidul, Kota Bandung 40122
+        </div>
+        <a href="https://maps.google.com/?q=Dinas+Kesehatan+Kota+Bandung" target="_blank" class="btn btn-blue btn-full">
+          <i class="ph-duotone ph-map-trifold"></i> Lihat di Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOKUMEN PERIZINAN SECTION -->
+<section class="peri-section bg-light" id="download">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Dokumen & Link</span>
+      <h2 class="section-title">Dokumen Perizinan</h2>
+      <p class="section-desc">Formulir, materi, dan dokumen persyaratan perizinan sarana kesehatan</p>
+    </div>
+    <div id="dokumen-perizinan-container">
+      <!-- Rendered by config.js -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="peri-section bg-gradient-blue">
+  <div class="container">
+    <div class="bpjs-info-box">
+      <div class="bpjs-info-content">
+        <h2>Butuh Bantuan Perizinan?</h2>
+        <p>Petugas JPRK Dinas Kesehatan Kota Bandung siap membantu proses perizinan Anda. Konsultasikan kebutuhan perizinan Anda sekarang!</p>
+        <div class="bpjs-cta">
+          <a href="https://wa.me/6281393400700" target="_blank" class="btn btn-yellow btn-lg">
+            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+          </a>
+          <a href="mailto:jprk@dinkes.bandung.go.id" class="btn btn-outline-white btn-lg">
+            <i class="ph-duotone ph-envelope-simple"></i> Kirim Email
+          </a>
+        </div>
+      </div>
+      <div class="bpjs-info-img">
+        <i class="ph-duotone ph-file-check"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 100 120" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+            <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#ffffff"/>
+            <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+            <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#69C14A"/>
+          </svg>
+          <div>
+            <div class="footer-brand-name">SIJAPRI</div>
+            <div class="footer-brand-sub">Dinas Kesehatan Kota Bandung</div>
+          </div>
+        </div>
+        <p class="footer-desc">Sistem Informasi Jaminan Pembiayaan & Perizinan Terintegrasi – Seksi JPRK Dinas Kesehatan Kota Bandung</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/6281393400700" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Layanan</h4>
+        <ul class="footer-links">
+          <li><a href="uhc.html"><i class="ph ph-caret-right"></i> Layanan UHC</a></li>
+          <li><a href="perizinan.html"><i class="ph ph-caret-right"></i> Perizinan Nakes</a></li>
+          <li><a href="perizinan.html#sarana"><i class="ph ph-caret-right"></i> Perizinan Sarana</a></li>
+          <li><a href="uhc.html#reaktivasi"><i class="ph ph-caret-right"></i> Reaktivasi JKN</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Informasi</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="ph ph-caret-right"></i> Beranda</a></li>
+          <li><a href="index.html#pengumuman"><i class="ph ph-caret-right"></i> Pengumuman</a></li>
+          <li><a href="#download"><i class="ph ph-caret-right"></i> Download Dokumen</a></li>
+          <li><a href="index.html#kontak"><i class="ph ph-caret-right"></i> Kontak Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Jam Operasional</h4>
+        <div class="footer-hours">
+          <div class="hour-row"><span>Senin – Kamis</span><span>07.30 – 16.00</span></div>
+          <div class="hour-row"><span>Jumat</span><span>07.30 – 16.30</span></div>
+          <div class="hour-row closed"><span>Sabtu – Minggu</span><span>Libur</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Dinas Kesehatan Kota Bandung – Seksi JPRK. Seluruh hak cipta dilindungi.</p>
+      <p>Dikembangkan oleh Tim JPRK Dinkes Kota Bandung</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/6281393400700" target="_blank" class="whatsapp-float" id="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat WhatsApp</span>
+</a>
+<button class="back-to-top" id="backToTop"><i class="ph ph-arrow-up"></i></button>
+
+<script src="app.js"></script>
+<script>
+  // Perizinan nav tab highlight
+  const sections = ['nakes','sarana','jadwal','download'];
+  window.addEventListener('scroll', () => {
+    sections.forEach(id => {
+      const sec = document.getElementById(id);
+      const tab = document.getElementById('pnav-' + id);
+      if (sec && tab) {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 200 && rect.bottom >= 200) {
+          document.querySelectorAll('.pnav-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>

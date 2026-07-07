@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIJAPRI – Sistem Informasi Jaminan Pembiayaan & Perizinan | Dinas Kesehatan Kota Bandung</title>
+  <meta name="description" content="SIJAPRI adalah portal resmi Seksi Jaminan Pembiayaan Regulasi Kesehatan (JPRK) Dinas Kesehatan Kota Bandung untuk layanan UHC dan perizinan sarana kesehatan."/>
+  <!-- Google Font: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { nunito: ['Nunito', 'sans-serif'] },
+          colors: {
+            brand: {
+              blue: '#2563EB',
+              'blue-dark': '#1D4ED8',
+              green: '#16A34A',
+              'green-dark': '#15803D',
+              yellow: '#F59E0B',
+              'yellow-dark': '#D97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { font-family: 'Nunito', sans-serif; }
+    /* Glassmorphism navbar */
+    .navbar-glass { background: rgba(255,255,255,0.82); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    /* Abstract blob backgrounds */
+    .blob-1, .blob-2, .blob-3 { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; }
+    .blob-1 { width: 500px; height: 500px; background: rgba(37,99,235,0.07); top: -80px; left: -120px; }
+    .blob-2 { width: 420px; height: 420px; background: rgba(22,163,74,0.06); bottom: -60px; right: -100px; }
+    .blob-3 { width: 350px; height: 350px; background: rgba(245,158,11,0.05); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    /* Smooth CTA hover */
+    .cta-btn { transition: all 0.3s cubic-bezier(.4,0,.2,1); }
+    .cta-btn:hover { transform: scale(1.05); }
+    /* Yellow underline accent */
+    .yellow-underline { position: relative; display: inline-block; }
+    .yellow-underline::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 5px; border-radius: 4px; background: #F59E0B; }
+    /* Mobile menu */
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .mobile-menu.open { max-height: 400px; }
+    /* Visi icon pulse */
+    @keyframes pulse-glow { 0%,100%{ box-shadow: 0 0 0 0 rgba(245,158,11,0.3); } 50%{ box-shadow: 0 0 20px 8px rgba(245,158,11,0.12); } }
+    .visi-icon { animation: pulse-glow 3s infinite; }
+  </style>
+</head>
+
+<body class="bg-white font-nunito text-gray-800 antialiased overflow-x-hidden">
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar-glass fixed top-0 left-0 w-full z-50 border-b border-gray-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[72px]">
+    <!-- Brand -->
+    <a href="#beranda" class="flex items-center gap-3">
+      <!-- Logo placeholders -->
+      <div class="flex items-center gap-1.5">
+        <!-- Placeholder: Logo Pemkot Bandung -->
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-blue to-brand-blue-dark flex items-center justify-center text-white text-xs font-bold shadow-md" title="Logo Pemkot Bandung">BDG</div>
+        <!-- Placeholder: Logo Dinkes -->
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-green to-brand-green-dark flex items-center justify-center text-white text-xs font-bold shadow-md" title="Logo Dinkes">DK</div>
+      </div>
+      <span class="text-xl md:text-2xl font-black tracking-tight text-brand-blue">SIJAPRI</span>
+    </a>
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
+      <li><a href="#beranda" class="hover:text-brand-blue transition">Beranda</a></li>
+      <li><a href="#tentang" class="hover:text-brand-blue transition">Tentang Kami</a></li>
+      <li><a href="#visi" class="hover:text-brand-blue transition">Visi</a></li>
+      <li><a href="#kontak" class="hover:text-brand-blue transition">Kontak</a></li>
+    </ul>
+    <!-- Hamburger -->
+    <button id="menuToggle" class="md:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-gray-700 rounded transition-all" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-gray-700 rounded transition-all" id="bar2"></span>
+      <span class="block w-6 h-0.5 bg-gray-700 rounded transition-all" id="bar3"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-semibold text-gray-700">
+      <li><a href="#beranda" class="block hover:text-brand-blue" onclick="closeMobile()">Beranda</a></li>
+      <li><a href="#tentang" class="block hover:text-brand-blue" onclick="closeMobile()">Tentang Kami</a></li>
+      <li><a href="#visi" class="block hover:text-brand-blue" onclick="closeMobile()">Visi</a></li>
+      <li><a href="#kontak" class="block hover:text-brand-blue" onclick="closeMobile()">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section id="beranda" class="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-slate-50">
+  <div class="blob-1"></div>
+  <div class="blob-2"></div>
+  <div class="blob-3"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+    <p data-aos="fade-down" data-aos-delay="100" class="text-sm md:text-base font-bold uppercase tracking-widest text-brand-green mb-4">Dinas Kesehatan Kota Bandung</p>
+    <h1 data-aos="fade-up" data-aos-delay="200" class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-gray-900 mb-5">
+      Selamat Datang di <span class="text-brand-blue">SIJAPRI</span>
+    </h1>
+    <p data-aos="fade-up" data-aos-delay="350" class="text-base sm:text-lg text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed">
+      Sistem Informasi Jaminan Pembiayaan &amp; Perizinan Dinas Kesehatan Kota Bandung
+    </p>
+    <div data-aos="zoom-in" data-aos-delay="500" class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- CTA 1: Portal UHC -->
+      <a href="#" class="cta-btn inline-flex items-center gap-2.5 px-8 py-4 bg-brand-blue hover:bg-brand-blue-dark text-white font-bold text-base rounded-2xl shadow-lg hover:shadow-xl">
+        <i class="fa-solid fa-heart-pulse text-lg"></i> Portal UHC
+      </a>
+      <!-- CTA 2: Perizinan Sarana -->
+      <a href="#" class="cta-btn inline-flex items-center gap-2.5 px-8 py-4 bg-brand-green hover:bg-brand-green-dark text-white font-bold text-base rounded-2xl shadow-lg hover:shadow-xl border-2 border-transparent hover:border-brand-yellow">
+        <i class="fa-solid fa-file-shield text-lg"></i> Perizinan Sarana
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TENTANG KAMI ============ -->
+<section id="tentang" class="relative py-20 md:py-28 bg-white overflow-hidden">
+  <div class="blob-2" style="top:-150px;right:-200px;"></div>
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+        <span class="yellow-underline">Tentang Kami</span>
+      </h2>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 relative overflow-hidden">
+      <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-brand-blue/5"></div>
+      <div class="absolute -bottom-10 -left-10 w-24 h-24 rounded-full bg-brand-green/5"></div>
+      <p class="text-lg md:text-xl leading-relaxed text-gray-600 relative z-10">
+        <span class="font-extrabold text-brand-blue">Seksi Jaminan Pembiayaan Regulasi Kesehatan (JPRK)</span> — Kami merupakan unit kerja di bawah Bidang Sumber Daya Kesehatan Dinas Kesehatan Kota Bandung. Berkomitmen untuk memberikan layanan terbaik dalam pengelolaan jaminan pembiayaan dan regulasi perizinan sarana kesehatan.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISI ============ -->
+<section id="visi" class="relative py-20 md:py-28 bg-slate-50 overflow-hidden">
+  <div class="blob-1" style="top:50%;left:-200px;"></div>
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <!-- Left: Image -->
+      <div data-aos="fade-right" data-aos-delay="100">
+        <!-- Ilustrasi vektor modern Gedung Sate / Kota Bandung -->
+        <img src="gedung-sate.png" alt="Ilustrasi Gedung Sate Kota Bandung" class="w-full max-w-md mx-auto rounded-3xl shadow-xl object-cover"/>
+      </div>
+      <!-- Right: Visi Card -->
+      <div data-aos="fade-left" data-aos-delay="250">
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-10">
+          <div class="visi-icon w-16 h-16 rounded-2xl bg-brand-yellow/15 flex items-center justify-center mb-6">
+            <!-- Eye Icon -->
+            <i class="fa-solid fa-eye text-3xl text-brand-yellow"></i>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">Visi</h3>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-600 italic">
+            "Mewujudkan Kota Bandung yang Unggul, Terbuka, Amanah, Maju dan Agamis."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HUBUNGI KAMI ============ -->
+<section id="kontak" class="relative py-20 md:py-28 bg-white overflow-hidden">
+  <div class="blob-3" style="top:0;left:30%;"></div>
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+        <span class="yellow-underline">Hubungi Kami</span>
+      </h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <!-- Card 1: Lokasi -->
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-3xl shadow-xl border border-gray-100 p-7 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-location-dot text-2xl text-brand-blue"></i>
+        </div>
+        <h4 class="font-bold text-gray-900 mb-2">Alamat</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">Jl. Supratman No. 73, Cihapit, Bandung</p>
+      </div>
+      <!-- Card 2: Email -->
+      <div data-aos="fade-up" data-aos-delay="250" class="bg-white rounded-3xl shadow-xl border border-gray-100 p-7 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-brand-green/10 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-envelope text-2xl text-brand-green"></i>
+        </div>
+        <h4 class="font-bold text-gray-900 mb-2">Email</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">dinaskesehatankotabdg@gmail.com</p>
+      </div>
+      <!-- Card 3: Telepon -->
+      <div data-aos="fade-up" data-aos-delay="400" class="sm:col-span-2 lg:col-span-1 bg-white rounded-3xl shadow-xl border border-gray-100 p-7 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-brand-yellow/10 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-phone text-2xl text-brand-yellow-dark"></i>
+        </div>
+        <h4 class="font-bold text-gray-900 mb-2">Pengaduan</h4>
+        <p class="text-gray-500 text-sm leading-relaxed">0811-7999-167 (Pengaduan)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-slate-50 border-t border-gray-200 py-8">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <p class="text-gray-600 text-sm font-semibold">© 2026 Hak Cipta: Rafied Ridwan Firmansyah. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+  // AOS init
+  AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  // Navbar shadow on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('shadow-md', window.scrollY > 20);
+  });
+</script>
+</body>
+</html>

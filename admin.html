@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel – SIJAPRI</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+
+<!-- ── LOGIN SCREEN ── -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">
+      <svg viewBox="0 0 100 120" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+        <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#1565C0"/>
+        <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+        <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#2E7D32"/>
+      </svg>
+      <div>
+        <div class="login-brand">SIJAPRI</div>
+        <div class="login-sub">Admin Panel</div>
+      </div>
+    </div>
+    <h1 class="login-title">Masuk ke Panel Admin</h1>
+    <p class="login-desc">Akses hanya untuk petugas yang berwenang</p>
+    <form class="login-form" id="loginForm">
+      <div class="form-group">
+        <label for="admin-user"><i class="fas fa-user"></i> Username</label>
+        <input type="text" id="admin-user" placeholder="Masukkan username" autocomplete="username" />
+      </div>
+      <div class="form-group">
+        <label for="admin-pass"><i class="fas fa-lock"></i> Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="admin-pass" placeholder="Masukkan password" autocomplete="current-password" />
+          <button type="button" class="pass-toggle" id="passToggle"><i class="fas fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="login-error" id="loginError"></div>
+      <button type="submit" class="btn-login" id="loginBtn">
+        <span>Masuk</span> <i class="fas fa-arrow-right"></i>
+      </button>
+    </form>
+    <div class="login-hint">
+      <i class="fas fa-info-circle"></i>
+      Default: <strong>admin</strong> / <strong>sijapri2025</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ── ADMIN PANEL ── -->
+<div class="admin-panel" id="adminPanel" style="display:none">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <svg viewBox="0 0 100 120" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+        <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#fff"/>
+        <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+        <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#69C14A"/>
+      </svg>
+      <div>
+        <div class="sb-brand">SIJAPRI</div>
+        <div class="sb-sub">Admin Panel</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Kelola Konten</div>
+      <a href="#" class="sb-link active" data-section="statistik" id="sb-statistik">
+        <i class="fas fa-chart-bar"></i> Statistik UHC
+      </a>
+      <a href="#" class="sb-link" data-section="hero" id="sb-hero">
+        <i class="fas fa-home"></i> Teks Hero
+      </a>
+      <a href="#" class="sb-link" data-section="pengumuman" id="sb-pengumuman">
+        <i class="fas fa-bullhorn"></i> Pengumuman
+      </a>
+      <a href="#" class="sb-link" data-section="jadwal" id="sb-jadwal">
+        <i class="fas fa-calendar-check"></i> Jadwal Konsultasi
+      </a>
+      <a href="#" class="sb-link" data-section="dokumen" id="sb-dokumen">
+        <i class="fas fa-folder-open"></i> Dokumen Perizinan
+      </a>
+      <a href="#" class="sb-link" data-section="dokumen" id="sb-dokumen">
+        <i class="fas fa-folder-open"></i> Dokumen Perizinan
+      </a>
+      <div class="nav-section-label">Pengaturan</div>
+      <a href="#" class="sb-link" data-section="kontak" id="sb-kontak">
+        <i class="fas fa-address-book"></i> Info Kontak
+      </a>
+      <a href="#" class="sb-link" data-section="jam" id="sb-jam">
+        <i class="fas fa-clock"></i> Jam Operasional
+      </a>
+      <a href="#" class="sb-link" data-section="akun" id="sb-akun">
+        <i class="fas fa-key"></i> Ganti Password
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="index.html" target="_blank" class="sb-view-site">
+        <i class="fas fa-external-link-alt"></i> Lihat Website
+      </a>
+      <button class="sb-logout" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i> Keluar
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="admin-main" id="adminMain">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <button class="topbar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+      <div class="topbar-title" id="topbarTitle">Statistik UHC</div>
+      <div class="topbar-right">
+        <div class="topbar-user">
+          <div class="user-avatar"><i class="fas fa-user-shield"></i></div>
+          <span id="topbarUser">Administrator</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ───────── SECTION: STATISTIK ───────── -->
+    <section class="admin-section active" id="section-statistik">
+      <div class="section-top">
+        <h2><i class="fas fa-chart-bar"></i> Statistik UHC</h2>
+        <p>Kelola angka-angka yang tampil di halaman utama dan halaman UHC</p>
+      </div>
+      <div class="stats-editor-grid" id="statsEditorGrid">
+        <!-- Generated by JS -->
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveStats"><i class="fas fa-save"></i> Simpan Perubahan</button>
+        <button class="btn-reset" id="resetStats"><i class="fas fa-undo"></i> Reset ke Default</button>
+      </div>
+    </section>
+
+    <!-- ───────── SECTION: HERO ───────── -->
+    <section class="admin-section" id="section-hero">
+      <div class="section-top">
+        <h2><i class="fas fa-home"></i> Teks Hero (Halaman Utama)</h2>
+        <p>Kelola teks badge, judul, dan subjudul di bagian hero halaman beranda</p>
+      </div>
+      <div class="form-grid">
+        <div class="form-col">
+          <div class="form-group-admin">
+            <label>Badge / Keterangan Seksi</label>
+            <input type="text" id="hero-badge" class="admin-input" />
+          </div>
+          <div class="form-group-admin">
+            <label>Judul Baris 1</label>
+            <input type="text" id="hero-title1" class="admin-input" />
+          </div>
+          <div class="form-group-admin">
+            <label>Judul Baris 2 (Highlight)</label>
+            <input type="text" id="hero-title2" class="admin-input" />
+          </div>
+          <div class="form-group-admin">
+            <label>Judul Baris 3</label>
+            <input type="text" id="hero-title3" class="admin-input" />
+          </div>
+          <div class="form-group-admin">
+            <label>Subjudul / Deskripsi</label>
+            <textarea id="hero-subtitle" class="admin-textarea" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="form-col">
+          <div class="preview-box">
+            <div class="preview-label"><i class="fas fa-eye"></i> Preview</div>
+            <div class="hero-preview-inner">
+              <span class="prev-badge" id="prev-badge"></span>
+              <div class="prev-title">
+                <span id="prev-t1"></span> <span class="prev-highlight" id="prev-t2"></span><br/>
+                <span id="prev-t3"></span>
+              </div>
+              <p class="prev-sub" id="prev-sub"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveHero"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+
+    <!-- ───────── SECTION: PENGUMUMAN ───────── -->
+    <section class="admin-section" id="section-pengumuman">
+      <div class="section-top">
+        <h2><i class="fas fa-bullhorn"></i> Pengumuman & Berita</h2>
+        <p>Kelola maksimal 3 pengumuman yang tampil di halaman beranda</p>
+      </div>
+      <div id="ann-editor-list">
+        <!-- Generated by JS -->
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveAnn"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+
+    <!-- ───────── SECTION: JADWAL ───────── -->
+    <section class="admin-section" id="section-jadwal">
+      <div class="section-top">
+        <h2><i class="fas fa-calendar-check"></i> Jadwal Konsultasi</h2>
+        <p>Kelola jadwal konsultasi online (Zoom) dan tatap muka</p>
+      </div>
+      <div class="form-grid">
+        <div class="form-col">
+          <div class="card-admin">
+            <div class="card-admin-title"><i class="fas fa-video text-blue"></i> Konsultasi Zoom</div>
+            <div id="zoom-schedule-editor"></div>
+            <div class="form-group-admin mt-8">
+              <label>Catatan Zoom</label>
+              <input type="text" id="zoom-note" class="admin-input" />
+            </div>
+          </div>
+        </div>
+        <div class="form-col">
+          <div class="card-admin">
+            <div class="card-admin-title"><i class="fas fa-building-user text-green"></i> Tatap Muka</div>
+            <div id="langsung-schedule-editor"></div>
+            <div class="form-group-admin mt-8">
+              <label>Catatan / Alamat</label>
+              <input type="text" id="langsung-note" class="admin-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveJadwal"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+
+
+    <!-- ───────── SECTION: DOKUMEN PERIZINAN ───────── -->
+    <section class="admin-section" id="section-dokumen">
+      <div class="section-top">
+        <h2><i class="fas fa-folder-open"></i> Dokumen Perizinan</h2>
+        <p>Kelola kartu dokumen, sub-kategori, dan item link di halaman perizinan</p>
+      </div>
+      <div id="dokumen-editor-container">
+        <!-- Generated by JS -->
+      </div>
+      <div style="margin-top:16px">
+        <button class="btn-save" id="addDokCard" style="background:#2E7D32"><i class="fas fa-plus"></i> Tambah Kartu Baru</button>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveDokumen"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+    <!-- ───────── SECTION: DOKUMEN PERIZINAN ───────── -->
+    <section class="admin-section" id="section-dokumen">
+      <div class="section-top">
+        <h2><i class="fas fa-folder-open"></i> Dokumen Perizinan</h2>
+        <p>Kelola kartu dokumen, sub-kategori, dan item link di halaman perizinan</p>
+      </div>
+      <div id="dokumen-editor-container">
+        <!-- Generated by JS -->
+      </div>
+      <div style="margin-top:16px; margin-bottom:16px;">
+        <button class="btn-save" id="addDokCard" style="background:#2E7D32"><i class="fas fa-plus"></i> Tambah Kartu Baru</button>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveDokumen"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+
+    <!-- ───────── SECTION: KONTAK ───────── -->
+    <section class="admin-section" id="section-kontak">
+      <div class="section-top">
+        <h2><i class="fas fa-address-book"></i> Informasi Kontak</h2>
+        <p>Kelola nomor WhatsApp, email, dan link sosial media</p>
+      </div>
+      <div class="card-admin max-600">
+        <div class="form-group-admin">
+          <label><i class="fab fa-whatsapp text-green"></i> Nomor WhatsApp (tanpa +)</label>
+          <input type="text" id="contact-wa-number" class="admin-input" placeholder="6281393400700" />
+          <small>Format: kode negara + nomor, contoh: 6281393400700</small>
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fab fa-whatsapp text-green"></i> Tampilan No. WhatsApp</label>
+          <input type="text" id="contact-whatsapp" class="admin-input" placeholder="+62 813-9340-0700" />
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fas fa-envelope text-blue"></i> Email</label>
+          <input type="email" id="contact-email" class="admin-input" placeholder="jprk@dinkes.bandung.go.id" />
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fab fa-instagram text-yellow"></i> Username Instagram</label>
+          <input type="text" id="contact-instagram" class="admin-input" placeholder="@dinkeskotabandung" />
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fab fa-instagram text-yellow"></i> URL Instagram</label>
+          <input type="text" id="contact-ig-url" class="admin-input" placeholder="https://instagram.com/..." />
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fab fa-youtube" style="color:#FF0000"></i> URL YouTube</label>
+          <input type="text" id="contact-yt-url" class="admin-input" placeholder="https://youtube.com/..." />
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fas fa-location-dot text-blue"></i> Alamat Lengkap</label>
+          <textarea id="contact-address" class="admin-textarea" rows="2"></textarea>
+        </div>
+        <div class="form-group-admin">
+          <label><i class="fas fa-map text-green"></i> URL Google Maps</label>
+          <input type="text" id="contact-maps-url" class="admin-input" placeholder="https://maps.google.com/..." />
+        </div>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveKontak"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+
+    <!-- ───────── SECTION: JAM OPS ───────── -->
+    <section class="admin-section" id="section-jam">
+      <div class="section-top">
+        <h2><i class="fas fa-clock"></i> Jam Operasional</h2>
+        <p>Kelola jam operasional yang tampil di footer dan halaman kontak</p>
+      </div>
+      <div class="card-admin max-600">
+        <div id="jam-ops-editor">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="saveJam"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </section>
+
+    <!-- ───────── SECTION: AKUN ───────── -->
+    <section class="admin-section" id="section-akun">
+      <div class="section-top">
+        <h2><i class="fas fa-key"></i> Ganti Password Admin</h2>
+        <p>Ubah password untuk keamanan akses admin panel</p>
+      </div>
+      <div class="card-admin max-500">
+        <div class="form-group-admin">
+          <label>Password Lama</label>
+          <input type="password" id="old-pass" class="admin-input" />
+        </div>
+        <div class="form-group-admin">
+          <label>Password Baru</label>
+          <input type="password" id="new-pass" class="admin-input" />
+        </div>
+        <div class="form-group-admin">
+          <label>Konfirmasi Password Baru</label>
+          <input type="password" id="confirm-pass" class="admin-input" />
+        </div>
+        <div class="pass-error" id="passError"></div>
+      </div>
+      <div class="action-bar">
+        <button class="btn-save" id="changePass"><i class="fas fa-save"></i> Ganti Password</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

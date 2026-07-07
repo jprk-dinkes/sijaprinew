@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIJAPRI – Sistem Informasi Jaminan Pembiayaan & Perizinan Terintegrasi</title>
+  <meta name="description" content="SIJAPRI adalah portal resmi Seksi Jaminan Pembiayaan Regulasi Kesehatan (JPRK) Dinas Kesehatan Kota Bandung untuk layanan UHC dan perizinan tenaga & sarana kesehatan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (brands only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css" />
+  <!-- Phosphor Icons – Premium duotone set -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">
+        <svg viewBox="0 0 100 120" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+          <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#1565C0"/>
+          <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+          <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#2E7D32"/>
+        </svg>
+      </div>
+      <div class="nav-title-group">
+        <span class="nav-title-main">SIJAPRI</span>
+        <span class="nav-title-sub">Sistem Informasi Jaminan Pembiayaan &amp; Perizinan</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link active">Beranda</a></li>
+      <li><a href="uhc.html" class="nav-link">Layanan UHC</a></li>
+      <li><a href="perizinan.html" class="nav-link">Perizinan</a></li>
+      <li><a href="#kontak" class="nav-link">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="beranda">
+  <div class="hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-badge">
+      <i class="ph-duotone ph-shield-check"></i>
+      <span data-cfg="hero.badge">Seksi Jaminan Pembiayaan Regulasi Kesehatan (JPRK)</span>
+    </div>
+    <h1 class="hero-title">
+      <span data-cfg="hero.title1">Sistem Informasi</span><br/>
+      <span class="hero-title-highlight" data-cfg="hero.title2">JPRK</span> <span data-cfg="hero.title3">Dinas Kesehatan<br/>Kota Bandung</span>
+    </h1>
+    <p class="hero-subtitle" data-cfg="hero.subtitle">
+      Mengintegrasikan layanan jaminan kesehatan masyarakat (UHC) dan perizinan tenaga &amp; sarana kesehatan dalam satu akses terpadu.
+    </p>
+    <div class="hero-cta">
+      <a href="uhc.html" class="btn btn-primary btn-lg">
+        <i class="ph-duotone ph-heartbeat"></i> Layanan UHC
+      </a>
+      <a href="perizinan.html" class="btn btn-outline btn-lg">
+        <i class="ph-duotone ph-certificate"></i> Perizinan
+      </a>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ==================== SERVICE CARDS ==================== -->
+<section class="services" id="layanan">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Layanan Kami</span>
+      <h2 class="section-title">Pilih Portal Layanan</h2>
+      <p class="section-desc">Akses layanan UHC dan perizinan kesehatan secara mudah dan terintegrasi</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- UHC Card -->
+      <div class="service-card service-uhc" onclick="window.location='uhc.html'" id="card-uhc">
+        <div class="service-card-icon">
+          <i class="ph-duotone ph-heartbeat"></i>
+        </div>
+        <h3 class="service-card-title">Layanan UHC</h3>
+        <p class="service-card-desc">Informasi Jaminan Kesehatan Universal Health Coverage bagi Masyarakat Kota Bandung</p>
+        <div class="service-card-tags">
+          <span class="tag tag-green">Masyarakat Umum</span>
+          <span class="tag tag-green">Faskes</span>
+        </div>
+        <div class="service-card-items">
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Pendaftaran JKN/KIS</div>
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Reaktivasi Kepesertaan</div>
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Info Capaian UHC</div>
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Syarat &amp; Ketentuan</div>
+        </div>
+        <div class="service-card-footer">
+          <span class="btn-card">Masuk Portal UHC <i class="ph ph-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- Perizinan Card -->
+      <div class="service-card service-perizinan" onclick="window.location='perizinan.html'" id="card-perizinan">
+        <div class="service-card-icon">
+          <i class="ph-duotone ph-file-lock"></i>
+        </div>
+        <h3 class="service-card-title">Perizinan Kesehatan</h3>
+        <p class="service-card-desc">Layanan perizinan tenaga kesehatan (Nakes) dan sarana kesehatan Kota Bandung</p>
+        <div class="service-card-tags">
+          <span class="tag tag-blue">Nakes</span>
+          <span class="tag tag-blue">Sarana Kesehatan</span>
+        </div>
+        <div class="service-card-items">
+          <div class="item"><i class="ph-fill ph-check-circle"></i> STR &amp; SIP Nakes</div>
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Izin Klinik &amp; Apotek</div>
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Konsultasi Online</div>
+          <div class="item"><i class="ph-fill ph-check-circle"></i> Download Dokumen</div>
+        </div>
+        <div class="service-card-footer">
+          <span class="btn-card">Masuk Portal Perizinan <i class="ph ph-arrow-right"></i></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STATS ==================== -->
+<section class="stats-section" id="capaian">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge section-badge-white">Capaian UHC</span>
+      <h2 class="section-title white">Capaian UHC Kota Bandung 2025</h2>
+      <p class="section-desc white">Data terkini kepesertaan Jaminan Kesehatan Nasional Kota Bandung</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card" id="stat-1">
+        <div class="stat-icon"><i class="ph-duotone ph-chart-pie-slice"></i></div>
+        <div class="stat-value" data-cfg-stat="capaian_uhc" data-target="98.03" data-decimals="2" data-suffix="%">0%</div>
+        <div class="stat-label" data-cfg="stats.capaian_uhc.label">Capaian UHC</div>
+        <div class="stat-desc"  data-cfg="stats.capaian_uhc.desc">Target Nasional ≥ 95%</div>
+        <div class="stat-bar"><div class="stat-bar-fill" style="width:98.03%"></div></div>
+      </div>
+      <div class="stat-card" id="stat-2">
+        <div class="stat-icon"><i class="ph-duotone ph-users-three"></i></div>
+        <div class="stat-value" data-cfg-stat="peserta" data-target="2540000" data-decimals="0" data-suffix="">0</div>
+        <div class="stat-label" data-cfg="stats.peserta.label">Peserta Terdaftar</div>
+        <div class="stat-desc"  data-cfg="stats.peserta.desc">Jiwa terdaftar JKN</div>
+      </div>
+      <div class="stat-card" id="stat-3">
+        <div class="stat-icon"><i class="ph-duotone ph-hospital"></i></div>
+        <div class="stat-value" data-cfg-stat="puskesmas" data-target="80" data-decimals="0" data-suffix="">0</div>
+        <div class="stat-label" data-cfg="stats.puskesmas.label">Puskesmas</div>
+        <div class="stat-desc"  data-cfg="stats.puskesmas.desc">Faskes Tingkat Pertama</div>
+      </div>
+      <div class="stat-card" id="stat-4">
+        <div class="stat-icon"><i class="ph-duotone ph-first-aid-kit"></i></div>
+        <div class="stat-value" data-cfg-stat="nakes_berizin" data-target="1240" data-decimals="0" data-suffix="+">0</div>
+        <div class="stat-label" data-cfg="stats.nakes_berizin.label">Nakes Berizin</div>
+        <div class="stat-desc"  data-cfg="stats.nakes_berizin.desc">Tenaga kesehatan aktif</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INFO SECTION ==================== -->
+<section class="info-section" id="info">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Tentang SIJAPRI</span>
+      <h2 class="section-title">Mengapa SIJAPRI?</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card" id="info-1">
+        <div class="info-icon info-icon-blue"><i class="ph-duotone ph-shield-check"></i></div>
+        <h3>Terintegrasi</h3>
+        <p>Satu portal untuk semua layanan jaminan kesehatan dan perizinan tenaga & sarana kesehatan Kota Bandung.</p>
+      </div>
+      <div class="info-card" id="info-2">
+        <div class="info-icon info-icon-green"><i class="ph-duotone ph-lightning"></i></div>
+        <h3>Mudah &amp; Cepat</h3>
+        <p>Akses informasi syarat, prosedur, dan status layanan kapan saja dan di mana saja secara online.</p>
+      </div>
+      <div class="info-card" id="info-3">
+        <div class="info-icon info-icon-yellow"><i class="ph-duotone ph-headset"></i></div>
+        <h3>Dukungan Langsung</h3>
+        <p>Konsultasi langsung via WhatsApp atau jadwal Zoom bersama petugas JPRK Dinkes Kota Bandung.</p>
+      </div>
+      <div class="info-card" id="info-4">
+        <div class="info-icon info-icon-blue"><i class="ph-duotone ph-file-text"></i></div>
+        <h3>Dokumen Lengkap</h3>
+        <p>Unduh formulir, panduan, dan surat keputusan yang diperlukan untuk proses perizinan dan pendaftaran UHC.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PENGUMUMAN ==================== -->
+<section class="announcement-section" id="pengumuman">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Informasi Terkini</span>
+      <h2 class="section-title">Pengumuman & Berita</h2>
+    </div>
+    <div class="announcement-grid" id="announcements-container">
+      <!-- Diisi oleh config.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ALUR LAYANAN ==================== -->
+<section class="flow-section" id="alur">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Langkah Mudah</span>
+      <h2 class="section-title">Alur Pengajuan Layanan</h2>
+      <p class="section-desc">Proses pengajuan layanan SIJAPRI sangat mudah dan transparan</p>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-step" id="step-1">
+        <div class="flow-number">01</div>
+        <div class="flow-icon"><i class="ph-duotone ph-magnifying-glass"></i></div>
+        <h3>Cek Persyaratan</h3>
+        <p>Baca dan siapkan semua dokumen persyaratan yang dibutuhkan sesuai jenis layanan</p>
+      </div>
+      <div class="flow-connector"><i class="ph ph-caret-right"></i></div>
+      <div class="flow-step" id="step-2">
+        <div class="flow-number">02</div>
+        <div class="flow-icon"><i class="ph-duotone ph-folder-open"></i></div>
+        <h3>Siapkan Dokumen</h3>
+        <p>Lengkapi semua dokumen yang dipersyaratkan dalam format dan ukuran yang sesuai</p>
+      </div>
+      <div class="flow-connector"><i class="ph ph-caret-right"></i></div>
+      <div class="flow-step" id="step-3">
+        <div class="flow-number">03</div>
+        <div class="flow-icon"><i class="ph-duotone ph-paper-plane-tilt"></i></div>
+        <h3>Ajukan Permohonan</h3>
+        <p>Submit dokumen melalui sistem online atau datang langsung ke kantor JPRK Dinkes</p>
+      </div>
+      <div class="flow-connector"><i class="ph ph-caret-right"></i></div>
+      <div class="flow-step" id="step-4">
+        <div class="flow-number">04</div>
+        <div class="flow-icon"><i class="ph-duotone ph-check-circle"></i></div>
+        <h3>Terima Hasil</h3>
+        <p>Persetujuan atau izin akan diterbitkan sesuai prosedur dan ketentuan yang berlaku</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== KONTAK ==================== -->
+<section class="contact-section" id="kontak">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-badge">Hubungi Kami</span>
+        <h2 class="section-title">Ada Pertanyaan?</h2>
+        <p class="contact-intro">Tim JPRK Dinas Kesehatan Kota Bandung siap membantu Anda. Hubungi kami melalui saluran berikut:</p>
+        <div class="contact-items">
+          <div class="contact-item" id="contact-wa">
+            <div class="contact-item-icon ci-green"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-item-text">
+              <strong>WhatsApp</strong>
+              <a data-href="contact.wa" href="https://wa.me/6281393400700" target="_blank" data-cfg="contact.whatsapp">+62 813-9340-0700</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-email">
+            <div class="contact-item-icon ci-blue"><i class="ph-duotone ph-envelope-simple"></i></div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <a data-href="contact.email" href="mailto:jprk@dinkes.bandung.go.id" data-cfg="contact.email">jprk@dinkes.bandung.go.id</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-ig">
+            <div class="contact-item-icon ci-yellow"><i class="fab fa-instagram"></i></div>
+            <div class="contact-item-text">
+              <strong>Instagram</strong>
+              <a data-href="contact.ig" href="https://instagram.com/dinkeskotabandung" target="_blank" data-cfg="contact.instagram">@dinkeskotabandung</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-address">
+            <div class="contact-item-icon ci-blue"><i class="ph-duotone ph-map-pin"></i></div>
+            <div class="contact-item-text">
+              <strong>Alamat</strong>
+              <span data-cfg="contact.address">Jl. Supratman No.73, Cibeunying Kidul, Kota Bandung 40122</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <div class="map-placeholder" id="map-placeholder">
+          <div class="map-content">
+            <i class="ph-duotone ph-map-trifold"></i>
+            <h3>Dinas Kesehatan Kota Bandung</h3>
+            <p>Jl. Supratman No.73, Cibeunying Kidul<br/>Kota Bandung 40122</p>
+            <a href="https://maps.google.com/?q=Dinas+Kesehatan+Kota+Bandung" target="_blank" class="btn btn-primary btn-sm">
+              <i class="ph-duotone ph-map-pin"></i> Buka di Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 100 120" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+            <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#ffffff"/>
+            <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+            <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#69C14A"/>
+          </svg>
+          <div>
+            <div class="footer-brand-name">SIJAPRI</div>
+            <div class="footer-brand-sub">Dinas Kesehatan Kota Bandung</div>
+          </div>
+        </div>
+        <p class="footer-desc">Sistem Informasi Jaminan Pembiayaan & Perizinan Terintegrasi – Seksi JPRK Dinas Kesehatan Kota Bandung</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/dinkeskotabandung" target="_blank" class="social-btn" id="social-ig"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dinkeskotabandung" target="_blank" class="social-btn" id="social-yt"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/6281393400700" target="_blank" class="social-btn" id="social-wa"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Layanan</h4>
+        <ul class="footer-links">
+          <li><a href="uhc.html"><i class="ph ph-caret-right"></i> Layanan UHC</a></li>
+          <li><a href="perizinan.html"><i class="ph ph-caret-right"></i> Perizinan Nakes</a></li>
+          <li><a href="perizinan.html#sarana"><i class="ph ph-caret-right"></i> Perizinan Sarana</a></li>
+          <li><a href="uhc.html#reaktivasi"><i class="ph ph-caret-right"></i> Reaktivasi JKN</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Informasi</h4>
+        <ul class="footer-links">
+          <li><a href="#tentang"><i class="ph ph-caret-right"></i> Tentang JPRK</a></li>
+          <li><a href="#pengumuman"><i class="ph ph-caret-right"></i> Pengumuman</a></li>
+          <li><a href="perizinan.html#download"><i class="ph ph-caret-right"></i> Download Dokumen</a></li>
+          <li><a href="#kontak"><i class="ph ph-caret-right"></i> Kontak Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Jam Operasional</h4>
+        <div class="footer-hours" data-jam-ops></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Dinas Kesehatan Kota Bandung – Seksi JPRK. Seluruh hak cipta dilindungi.</p>
+      <p>Dikembangkan oleh Tim JPRK Dinkes Kota Bandung</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/6281393400700" target="_blank" class="whatsapp-float" id="whatsapp-float" data-wa-link>
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat WhatsApp</span>
+</a>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+  <i class="ph ph-arrow-up"></i>
+</button>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script>document.addEventListener('DOMContentLoaded', applyConfig);</script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan UHC – SIJAPRI Dinas Kesehatan Kota Bandung</title>
+  <meta name="description" content="Informasi layanan Universal Health Coverage (UHC) dan Jaminan Kesehatan Nasional (JKN) Kota Bandung – pendaftaran, reaktivasi, dan syarat kepesertaan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (brands only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css" />
+  <!-- Phosphor Icons – Premium duotone set -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="uhc.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">
+        <svg viewBox="0 0 100 120" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+          <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#1565C0"/>
+          <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+          <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#2E7D32"/>
+        </svg>
+      </div>
+      <div class="nav-title-group">
+        <span class="nav-title-main">SIJAPRI</span>
+        <span class="nav-title-sub">Sistem Informasi Jaminan Pembiayaan &amp; Perizinan</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Beranda</a></li>
+      <li><a href="uhc.html" class="nav-link active">Layanan UHC</a></li>
+      <li><a href="perizinan.html" class="nav-link">Perizinan</a></li>
+      <li><a href="index.html#kontak" class="nav-link">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero page-hero-uhc">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="ph ph-caret-right"></i>
+      <span>Layanan UHC</span>
+    </div>
+    <div class="page-hero-icon"><i class="ph-duotone ph-heartbeat"></i></div>
+    <h1 class="page-hero-title">Layanan UHC</h1>
+    <p class="page-hero-subtitle">Universal Health Coverage – Jaminan Kesehatan Nasional (JKN) bagi Masyarakat Kota Bandung</p>
+  </div>
+</section>
+
+<!-- CAPAIAN UHC MINI STATS -->
+<section class="uhc-stats-bar">
+  <div class="container">
+    <div class="uhc-stats-row">
+      <div class="uhc-stat-item">
+        <span class="usi-value">98,03%</span>
+        <span class="usi-label">Capaian UHC 2025</span>
+      </div>
+      <div class="usi-divider"></div>
+      <div class="uhc-stat-item">
+        <span class="usi-value">2,54 Jt</span>
+        <span class="usi-label">Jiwa Terdaftar JKN</span>
+      </div>
+      <div class="usi-divider"></div>
+      <div class="uhc-stat-item">
+        <span class="usi-value">80</span>
+        <span class="usi-label">Puskesmas FKTP</span>
+      </div>
+      <div class="usi-divider"></div>
+      <div class="uhc-stat-item">
+        <span class="usi-value">≥ 95%</span>
+        <span class="usi-label">Target Nasional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KRITERIA -->
+<section class="uhc-section" id="kriteria">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Cek Dulu</span>
+      <h2 class="section-title">Siapa yang Bisa Mendaftar?</h2>
+      <p class="section-desc">Pendaftaran JKN/UHC diperuntukkan bagi masyarakat yang memenuhi kriteria berikut</p>
+    </div>
+    <div class="kriteria-grid">
+      <div class="kriteria-card k-eligible">
+        <div class="k-icon"><i class="ph-fill ph-check-circle"></i></div>
+        <h3>Warga Kota Bandung</h3>
+        <p>Memiliki KTP/KK dengan domisili Kota Bandung yang masih aktif dan valid</p>
+        <div class="k-badge k-eligible-badge">Memenuhi Syarat</div>
+      </div>
+      <div class="kriteria-card k-eligible">
+        <div class="k-icon"><i class="ph-fill ph-check-circle"></i></div>
+        <h3>Belum Terdaftar JKN</h3>
+        <p>Masyarakat yang belum memiliki kepesertaan JKN aktif dari segmen manapun</p>
+        <div class="k-badge k-eligible-badge">Memenuhi Syarat</div>
+      </div>
+      <div class="kriteria-card k-eligible">
+        <div class="k-icon"><i class="ph-fill ph-check-circle"></i></div>
+        <h3>Kepesertaan Tidak Aktif</h3>
+        <p>Peserta JKN yang statusnya nonaktif/tidak aktif dan ingin melakukan reaktivasi</p>
+        <div class="k-badge k-eligible-badge">Reaktivasi</div>
+      </div>
+      <div class="kriteria-card k-not-eligible">
+        <div class="k-icon"><i class="ph-fill ph-x-circle"></i></div>
+        <h3>Sudah JKN Aktif</h3>
+        <p>Masyarakat yang sudah terdaftar dan memiliki JKN aktif tidak perlu mendaftar ulang</p>
+        <div class="k-badge k-not-badge">Tidak Perlu Daftar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JENIS LAYANAN UHC -->
+<section class="uhc-section bg-light" id="jenis-layanan">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Pilih Layanan</span>
+      <h2 class="section-title">Jenis Layanan UHC</h2>
+    </div>
+    <div class="layanan-tabs">
+      <div class="tab-btn active" data-tab="masyarakat">
+        <i class="ph-duotone ph-users-three"></i> Masyarakat Umum
+      </div>
+      <div class="tab-btn" data-tab="reaktivasi" id="reaktivasi">
+        <i class="ph-duotone ph-arrows-clockwise"></i> Reaktivasi JKN
+      </div>
+      <div class="tab-btn" data-tab="faskes">
+        <i class="ph-duotone ph-hospital"></i> Informasi Faskes
+      </div>
+    </div>
+
+    <!-- Tab: Masyarakat -->
+    <div class="tab-content active" id="tab-masyarakat">
+      <div class="tab-inner">
+        <div class="tab-info">
+          <div class="ti-badge ti-green"><i class="ph-duotone ph-user-plus"></i> Pendaftaran Baru JKN</div>
+          <h3>Pendaftaran JKN Baru untuk Masyarakat</h3>
+          <p>Bagi masyarakat Kota Bandung yang belum memiliki Jaminan Kesehatan Nasional (JKN), dapat mendaftar melalui jalur berikut:</p>
+          <ol class="step-list">
+            <li>Siapkan KTP dan Kartu Keluarga (KK) asli + fotokopi</li>
+            <li>Datang ke Puskesmas terdekat atau Dinas Kesehatan Kota Bandung</li>
+            <li>Isi formulir pendaftaran yang telah disediakan</li>
+            <li>Petugas akan memvalidasi data kependudukan</li>
+            <li>Kartu JKN akan diterbitkan dalam 1–3 hari kerja</li>
+          </ol>
+          <div class="doc-list">
+            <h4><i class="ph-duotone ph-paperclip"></i> Dokumen yang Diperlukan</h4>
+            <div class="doc-chips">
+              <span class="doc-chip"><i class="ph-duotone ph-identification-card"></i> KTP Elektronik</span>
+              <span class="doc-chip"><i class="ph-duotone ph-users-three"></i> Kartu Keluarga</span>
+              <span class="doc-chip"><i class="ph-duotone ph-image"></i> Foto 3×4 (2 lembar)</span>
+              <span class="doc-chip"><i class="ph-duotone ph-file-text"></i> Surat Domisili (jika perlu)</span>
+            </div>
+          </div>
+          <a href="https://wa.me/6281393400700" target="_blank" class="btn btn-green btn-lg">
+            <i class="fab fa-whatsapp"></i> Konsultasi via WhatsApp
+          </a>
+        </div>
+        <div class="tab-image">
+          <div class="info-visual info-visual-green">
+            <i class="ph-duotone ph-identification-badge"></i>
+            <h4>Kartu JKN-KIS</h4>
+            <p>Jaminan kesehatan untuk seluruh keluarga</p>
+            <div class="vis-stats">
+              <div><span>Gratis</span><small>untuk PBI</small></div>
+              <div><span>Rp 42rb</span><small>Mandiri Kelas III</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Reaktivasi -->
+    <div class="tab-content" id="tab-reaktivasi">
+      <div class="tab-inner">
+        <div class="tab-info">
+          <div class="ti-badge ti-blue"><i class="ph-duotone ph-arrows-clockwise"></i> Reaktivasi Kepesertaan</div>
+          <h3>Reaktivasi JKN Non-Aktif</h3>
+          <p>Kepesertaan JKN yang nonaktif dapat diaktifkan kembali melalui program Pemda Kota Bandung. Cek status kepesertaan Anda terlebih dahulu.</p>
+          <ol class="step-list">
+            <li>Cek status kepesertaan di aplikasi Mobile JKN atau <em>cek-jkn.bpjs-kesehatan.go.id</em></li>
+            <li>Jika nonaktif karena tunggakan, dapat dibantu melalui program BPJS Pemda</li>
+            <li>Bawa dokumen ke Puskesmas atau Dinas Kesehatan</li>
+            <li>Petugas akan memproses reaktivasi dalam sistem</li>
+            <li>Status aktif kembali dalam 1×24 jam</li>
+          </ol>
+          <div class="doc-list">
+            <h4><i class="ph-duotone ph-paperclip"></i> Syarat Reaktivasi</h4>
+            <div class="doc-chips">
+              <span class="doc-chip"><i class="ph-duotone ph-identification-card"></i> KTP / NIK Aktif</span>
+              <span class="doc-chip"><i class="ph-duotone ph-credit-card"></i> Kartu JKN Lama</span>
+              <span class="doc-chip"><i class="ph-duotone ph-users-three"></i> Kartu Keluarga</span>
+              <span class="doc-chip"><i class="ph-duotone ph-receipt"></i> Bukti Domisili Bdg</span>
+            </div>
+          </div>
+          <a href="https://wa.me/6281393400700" target="_blank" class="btn btn-green btn-lg">
+            <i class="fab fa-whatsapp"></i> Bantu Proses Reaktivasi
+          </a>
+        </div>
+        <div class="tab-image">
+          <div class="info-visual info-visual-blue">
+            <i class="ph-duotone ph-arrows-clockwise"></i>
+            <h4>Status Kepesertaan</h4>
+            <p>Cek status JKN Anda sekarang</p>
+            <a href="https://cek-jkn.bpjs-kesehatan.go.id" target="_blank" class="vis-link">
+              <i class="ph ph-arrow-square-out"></i> Cek Status JKN
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Faskes -->
+    <div class="tab-content" id="tab-faskes">
+      <div class="tab-inner">
+        <div class="tab-info">
+          <div class="ti-badge ti-yellow"><i class="ph-duotone ph-hospital"></i> Fasilitas Kesehatan</div>
+          <h3>Fasilitas Kesehatan Tingkat Pertama (FKTP)</h3>
+          <p>Informasi mengenai Puskesmas dan klinik yang bekerja sama dengan BPJS Kesehatan di Kota Bandung.</p>
+          <div class="faskes-list">
+            <div class="faskes-item">
+              <i class="ph-duotone ph-hospital"></i>
+              <div>
+                <strong>80 Puskesmas</strong>
+                <span>Tersebar di 30 Kecamatan Kota Bandung</span>
+              </div>
+            </div>
+            <div class="faskes-item">
+              <i class="ph-duotone ph-buildings"></i>
+              <div>
+                <strong>Klinik Pratama</strong>
+                <span>Ratusan klinik swasta yang bekerjasama dengan BPJS</span>
+              </div>
+            </div>
+            <div class="faskes-item">
+              <i class="ph-duotone ph-tooth"></i>
+              <div>
+                <strong>Dokter Praktik Gigi</strong>
+                <span>Layanan gigi ditanggung JKN di FKTP</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://faskes.bpjs-kesehatan.go.id" target="_blank" class="btn btn-blue btn-lg">
+            <i class="ph ph-arrow-square-out"></i> Cari Faskes Terdekat
+          </a>
+        </div>
+        <div class="tab-image">
+          <div class="info-visual info-visual-yellow">
+            <i class="ph-duotone ph-map-trifold"></i>
+            <h4>Peta Puskesmas</h4>
+            <p>30 Kecamatan – 80 Puskesmas</p>
+            <div class="vis-stats">
+              <div><span>80</span><small>Puskesmas</small></div>
+              <div><span>30</span><small>Kecamatan</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ALUR JKN -->
+<section class="uhc-section" id="alur-jkn">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Mudah & Cepat</span>
+      <h2 class="section-title">Alur Pendaftaran JKN</h2>
+    </div>
+    <div class="alur-steps">
+      <div class="alur-step">
+        <div class="alur-num">1</div>
+        <div class="alur-icon"><i class="ph-duotone ph-magnifying-glass"></i></div>
+        <div class="alur-text">
+          <h4>Cek Status &amp; Syarat</h4>
+          <p>Pastikan Anda belum terdaftar JKN dan memenuhi syarat domisili Kota Bandung</p>
+        </div>
+      </div>
+      <div class="alur-connector"></div>
+      <div class="alur-step">
+        <div class="alur-num">2</div>
+        <div class="alur-icon"><i class="ph-duotone ph-folder-open"></i></div>
+        <div class="alur-text">
+          <h4>Siapkan Dokumen</h4>
+          <p>KTP, KK, dan foto 3×4 sebanyak 2 lembar untuk proses pendaftaran</p>
+        </div>
+      </div>
+      <div class="alur-connector"></div>
+      <div class="alur-step">
+        <div class="alur-num">3</div>
+        <div class="alur-icon"><i class="ph-duotone ph-hospital"></i></div>
+        <div class="alur-text">
+          <h4>Datang ke Puskesmas</h4>
+          <p>Kunjungi Puskesmas terdekat di Kota Bandung atau datang langsung ke Dinkes</p>
+        </div>
+      </div>
+      <div class="alur-connector"></div>
+      <div class="alur-step">
+        <div class="alur-num">4</div>
+        <div class="alur-icon"><i class="ph-duotone ph-clipboard-text"></i></div>
+        <div class="alur-text">
+          <h4>Verifikasi Petugas</h4>
+          <p>Petugas memverifikasi data kependudukan dan kelengkapan berkas</p>
+        </div>
+      </div>
+      <div class="alur-connector"></div>
+      <div class="alur-step">
+        <div class="alur-num">5</div>
+        <div class="alur-icon"><i class="ph-duotone ph-identification-card"></i></div>
+        <div class="alur-text">
+          <h4>Terima Kartu JKN</h4>
+          <p>Kartu JKN-KIS diterbitkan dalam 1–3 hari kerja, bisa langsung digunakan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BPJS -->
+<section class="uhc-section bg-gradient-green" id="info-bpjs">
+  <div class="container">
+    <div class="bpjs-info-box">
+      <div class="bpjs-info-content">
+        <h2>Butuh Bantuan Proses JKN?</h2>
+        <p>Tim JPRK Dinas Kesehatan Kota Bandung siap membantu proses pendaftaran dan reaktivasi JKN Anda secara gratis. Hubungi kami sekarang!</p>
+        <div class="bpjs-cta">
+          <a href="https://wa.me/6281393400700" target="_blank" class="btn btn-yellow btn-lg">
+            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+          </a>
+          <a href="mailto:jprk@dinkes.bandung.go.id" class="btn btn-outline-white btn-lg">
+            <i class="ph-duotone ph-envelope-simple"></i> Kirim Email
+          </a>
+        </div>
+      </div>
+      <div class="bpjs-info-img">
+        <i class="ph-duotone ph-shield-heart"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 100 120" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="62" cy="14" r="12" fill="#F5C518"/>
+            <path d="M8,60 A38,38 0 0,1 46,22 L46,40 A20,20 0 0,0 26,60 A20,20 0 0,0 46,80 L46,98 A38,38 0 0,1 8,60 Z" fill="#ffffff"/>
+            <path d="M46,45 Q70,60 55,85 Q80,75 80,60 Q80,48 65,42 Z" fill="#F5C518"/>
+            <path d="M46,42 Q60,35 68,42 Q58,52 46,56 Z" fill="#69C14A"/>
+          </svg>
+          <div>
+            <div class="footer-brand-name">SIJAPRI</div>
+            <div class="footer-brand-sub">Dinas Kesehatan Kota Bandung</div>
+          </div>
+        </div>
+        <p class="footer-desc">Sistem Informasi Jaminan Pembiayaan & Perizinan Terintegrasi – Seksi JPRK Dinas Kesehatan Kota Bandung</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/6281393400700" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Layanan</h4>
+        <ul class="footer-links">
+          <li><a href="uhc.html"><i class="ph ph-caret-right"></i> Layanan UHC</a></li>
+          <li><a href="perizinan.html"><i class="ph ph-caret-right"></i> Perizinan Nakes</a></li>
+          <li><a href="perizinan.html#sarana"><i class="ph ph-caret-right"></i> Perizinan Sarana</a></li>
+          <li><a href="uhc.html#reaktivasi"><i class="ph ph-caret-right"></i> Reaktivasi JKN</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Informasi</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="ph ph-caret-right"></i> Beranda</a></li>
+          <li><a href="index.html#pengumuman"><i class="ph ph-caret-right"></i> Pengumuman</a></li>
+          <li><a href="perizinan.html#download"><i class="ph ph-caret-right"></i> Download Dokumen</a></li>
+          <li><a href="index.html#kontak"><i class="ph ph-caret-right"></i> Kontak Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Jam Operasional</h4>
+        <div class="footer-hours">
+          <div class="hour-row"><span>Senin – Kamis</span><span>07.30 – 16.00</span></div>
+          <div class="hour-row"><span>Jumat</span><span>07.30 – 16.30</span></div>
+          <div class="hour-row closed"><span>Sabtu – Minggu</span><span>Libur</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Dinas Kesehatan Kota Bandung – Seksi JPRK. Seluruh hak cipta dilindungi.</p>
+      <p>Dikembangkan oleh Tim JPRK Dinkes Kota Bandung</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/6281393400700" target="_blank" class="whatsapp-float" id="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat WhatsApp</span>
+</a>
+<button class="back-to-top" id="backToTop"><i class="ph ph-arrow-up"></i></button>
+
+<script src="app.js"></script>
+<script>
+  // Tab functionality
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById('tab-' + btn.dataset.tab);
+      if (target) target.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
